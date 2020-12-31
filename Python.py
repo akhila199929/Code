@@ -22,7 +22,7 @@ def create(key,value,timeout=0):
             else:
                 print("error: Memory limit exceeded!! ")
         else:
-            print("error: Invalind key_name!! key_name must contain only alphabets and no special characters or numbers")
+            print("error: Invalid key name!! key name must contain only alphabets and no special characters or numbers")
 
 #read operation
 def read(key):

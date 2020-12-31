@@ -3,7 +3,10 @@ import time
 import threading 
 from threading import*
 
+#create dictionary
 dict ={} 
+
+#create operation
 def create(key,value,timeout=0):
     if key in dict:
         print("error: key already exists") 
@@ -20,7 +23,8 @@ def create(key,value,timeout=0):
                 print("error: Memory limit exceeded!! ")
         else:
             print("error: Invalind key_name!! key_name must contain only alphabets and no special characters or numbers")
-            
+
+#read operation
 def read(key):
     if key not in dict:
         print("error: given key does not exist in database. Please enter a valid key") 
@@ -36,6 +40,7 @@ def read(key):
             stri=str(key)+":"+str(b[0])
             return stri
 
+#delete operation
 def delete(key):
     if key not in dict:
         print("error: given key does not exist in database. Please enter a valid key") 
@@ -51,6 +56,7 @@ def delete(key):
             del dict[key]
             print("key is successfully deleted")
 
+#modify operation
 def modify(key,value):
     b=dict[key]
     if b[1]!=0:
